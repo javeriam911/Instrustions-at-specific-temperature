@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Temperature Checking App </title>
+<style>
+    .one{
+        text-align: center;
+        font-size: 38px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 100px;
+color: rgb(123, 69, 128);}
+    .three{ 
+        background-color: aqua;
+    }
+    .two{ border: 10px; text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;font-weight: 100px;font-size: 28px;color: blueviolet;}
+    button{
+        background-color: peru;
+    }
+    .four{background-color: brown;text-align: center;font-family: Arial, Helvetica, sans-serif;font-size: 30px;
+
+    }
+.five{
+    background-color: cadetblue;
+    font-size: 20px;font-family: 'Times New Roman', Times, serif;font-weight: 100px;
+}
+</style>
+</head>
+
+
+
+<body class="three">
+    <h1 class="one">" Temperature Checking App "</h1>
+
+    <form  class="two" onsubmit="ConditionCheck();return false">
+        <label for="temp">Temperature :</label>
+        <input type="text" class="five" id="temp" placeholder="enter your temperature here :"> <br>
+       <br> <button type="submit" value="check"> Check</button>
+    </form>
+
+    <div>
+        <p class="four" id="result"></p>
+    </div>
+    <script>
+
+        function ConditionCheck() {
+            let temp = +document.querySelector("#temp").value;
+            if
+                (temp > 30) document.querySelector("#result").innerHTML =
+                    "its too hot!";
+            else if
+                (temp > 25) document.querySelector("#result").innerHTML =
+                    "its pleasent outside";
+            else if
+                (temp > 15) document.querySelector("#result").innerHTML =
+                    "its cold outside!";
+            else if
+                (temp < 10) document.querySelector("#result").innerHTML =
+                    "its too cold !!!,you need a jacket"
+
+            else if
+                (temp < 0) document.querySelector("#result").innerHTML =
+                    "its freezing outside!!!, you probably need double jacket!!!"
+        }
+
+
+
+
+
+    </script>
+    <!-- // function ConditionCheck() {
+    // let temp = +document.querySelector("#temp");
+
+    // if (temp > 30) document.querySelector("#result").innerHTML = "its too hot"
+    // console.log("temp")
+    // ; else if (temp > 25)document.querySelector("#result").innerHTML = "its pleasent outside"
+    // ; else if (temp > 10) document.querySelector("#result").innerHTML = "you need a jacket"
+    // ; else if (temp < 10)document.querySelector("#result").innerHTML="probably you need double jacket" // ; // else
+        if (temp < -10) documentdocument.querySelector("#result").innerHTML="its freezing outside" // } </body> -->
